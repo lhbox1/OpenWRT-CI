@@ -1,8 +1,11 @@
 # IPQ6000系列6.18固件
   
   固件集成增强版geoip.dat、geosite.dat,开箱即用，正确配置Dae不会报错
-  
-  适度精简，确保最大性能发挥。
+
+  源码来自davidtall & VIKINGYFY
+  https://github.com/VIKINGYFY/OpenWRT-CI
+  https://github.com/davidtall/DaeWRT-CI
+  略微修改，适度精简，确保最大性能发挥。
 
   生产力工具：Samba4,Openlist2,Dae,Homeproxy,Openclash,Tailscale
   
