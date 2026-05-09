@@ -1,7 +1,4 @@
 #!/bin/bash
-# SPDX-License-Identifier: MIT
-# Copyright (C) 2026 VIKINGYFY
-
 
 #安装和更新软件包
 UPDATE_PACKAGE() {
@@ -62,6 +59,14 @@ UPDATE_PACKAGE "passwall" "Openwrt-Passwall/openwrt-passwall" "main" "pkg"
 UPDATE_PACKAGE "passwall2" "Openwrt-Passwall/openwrt-passwall2" "main" "pkg"
 
 UPDATE_PACKAGE "luci-app-tailscale" "asvow/luci-app-tailscale" "main"
+
+
+#添加
+UPDATE_PACKAGE "luci-app-adguardhome" "w9315273/luci-app-adguardhome" "master"
+
+
+
+
 
 UPDATE_PACKAGE "ddns-go" "sirpdboy/luci-app-ddns-go" "main"
 UPDATE_PACKAGE "diskman" "lisaac/luci-app-diskman" "master"
@@ -130,8 +135,8 @@ UPDATE_VERSION() {
 
 
 #删除官方的默认插件
- rm -rf ../feeds/luci/applications/luci-app-{passwall*,mosdns,dockerman,dae*,bypass*}
- rm -rf ../feeds/packages/net/{v2ray-geodata,dae*}
+rm -rf ../feeds/luci/applications/luci-app-{passwall*,mosdns,openclash,adguardhome,dockerman,dae*,bypass*}
+rm -rf ../feeds/packages/net/{adguardhome,v2ray-geodata,dae*}
 # cp -r $GITHUB_WORKSPACE/package/* ./
 # #修复daed/Makefile
 # #rm -rf luci-app-daed/daed/Makefile && cp -r $GITHUB_WORKSPACE/patches/daed/Makefile luci-app-daed/daed/
